@@ -9,7 +9,7 @@ module DestroyedAt
             r.destroy
           end
         end
-        update_counter(-records.length) unless inverse_updates_counter_cache?
+        update_counter(-records.length) unless reflection.enverse_updates_counter_cache?
       else
         super
       end
